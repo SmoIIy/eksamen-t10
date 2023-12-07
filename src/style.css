@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+:root {
+
+    /* Farver */
+    --main-blue: #1C355E;
+    --light-blue: #86D2C9;
+    --black: #1B1B1B;
+    --orange: #FF9040;
+    --dark-white: #E9E9E9;
+    --bright-white: #F8F8F8;
+
+    /* Fonts */
+    --header-font: "prometo", sans-serif;
+
+}
+
+h1 {
+    font-family: var(--header-font);
+    font-weight: 500;
+    font-size: 64px;
+    line-height: normal;
+    color: var(--main-blue);
+}

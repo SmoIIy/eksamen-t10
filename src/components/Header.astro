@@ -1,0 +1,52 @@
+---
+import '../style.css'
+---
+
+<header class="desktopheader">
+    <a href="/index" class="logo">
+        <img src="/icons/logofarvetekst.svg" alt="logo">
+    </a>
+    <ul>
+        <li><a href="#">Åbningstider</a></li>
+        <li><a href="#">Om apoteket</a></li>
+        <li><a href="#">Kontakt</a></li>
+    </ul>
+</header>
+
+<style>
+
+    .desktopheader {
+        max-width: 1600px;
+        height: 150px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        padding: 20px 10px 10px 10px;
+        
+    }
+    ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        width: 650px;
+    }
+    li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        transition: all 200ms ease;
+        font-weight: 500;
+    }
+    a:hover {
+        color: var(--light-blue);
+    }
+    @media (max-width: 460px){
+        .desktopheader{
+            display: none;
+        }
+    }
+</style>

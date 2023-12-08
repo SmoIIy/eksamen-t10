@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0;
@@ -17,7 +17,9 @@
     --bright-white: #F8F8F8;
 
     /* Fonts */
-    --header-font: "prometo", sans-serif;
+    --header-font: 'prometo', sans-serif;
+    --subheader-font: 'Prompt', sans-serif;
+    --paragraph-font: 'Open Sans', sans-serif;
 
 }
 
@@ -28,3 +30,29 @@ h1 {
     line-height: normal;
     color: var(--main-blue);
 }
+
+h2 {
+    font-family: var(--subheader-font);
+    font-weight: 500;
+    font-size: 36px;
+    line-height: normal;
+    color: var(--main-blue);
+}
+
+h3 {
+    font-family: var(--header-font);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: normal;
+    color: var(--black);
+}
+
+p, a {
+    font-family: var(--paragraph-font);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--black);
+}
+

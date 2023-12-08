@@ -1,0 +1,257 @@
+---
+import '../style.css'
+---
+
+
+<footer class="footerparent">
+
+<a class="logohvidtekst" href="index.astro"><img src="../../public/icons/logohvidtekst.svg" alt="Logo"></a>
+
+<hr>
+
+<div class="link_list">
+<ul>
+    <li><a href="index.html">Forside</a></li>
+    <li><a href="aabningstider.html">Åbningstider</a></li>
+    <li><a href="omos.html">Om apoteket</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+</ul>
+</div>
+
+<hr>
+<div class="adresseaabningstider">
+<div class="adresse">
+    <img src="../../public/icons/mapmarker.svg" alt="mapmarker">
+<ul>
+    <li id="reberbanegade">Reberbanegade 3</li>
+    <li>2300 København S</li>
+</ul>
+</div>
+
+
+<div class="aabningstider">
+<img src="../../public/icons/clock.svg" alt="clock">
+<dl>
+    <dt>Hverdage:</dt>
+    <dd>09.30 - 19.00</dd>
+    <dt>Lørdag:</dt>
+    <dd>10.00 - 17.00</dd>
+    <dt>Søndag:</dt>
+    <dd>Lukket</dd>
+</dl>
+</div>
+</div>
+<hr>
+
+
+<div class="tlffaxmail">
+
+<div class="telefon">
+    <img src="../../public/icons/telefon.svg" alt="telefon">
+    <ul>
+        <li>+45 3257 8383</li>
+    </ul>
+</div>
+
+<div class="fax">
+    <img src="../../public/icons/fax.svg" alt="fax">
+    <ul>
+        <li>+45 3257 4089</li>
+    </ul>
+</div>
+
+<div class="mail">
+    <img src="../../public/icons/mail.svg" alt="mail">
+    <ul>
+        <li>243ka@apoteket.dk</li>
+    </ul>
+</div>
+
+
+</div>
+
+<hr>
+
+<div class="SoMelogo">
+    <a href="https://www.facebook.com/amagerbroapo/?locale=da_DK"><img src="../../public/icons/facebooklogo.svg" alt="facebook"></a>
+    <a href="https://www.instagram.com/amagerbroapotek/"><img src="../../public/icons/instagramlogo.svg" alt="instagram"></a>
+</div>
+
+<div class="copyright">
+    <p>All copyright reserved</p>
+    <p>Terms and Policy</p>
+</div>
+
+</footer>
+
+<style>
+.footerparent {
+    background-color: var(--main-blue);
+    padding: 20px;
+}
+.logohvidtekst {
+    text-align: center;
+    display: block;
+    padding: 1rem;
+}
+hr {
+    width: 80%;
+    margin: auto;
+}
+ul {
+    list-style: none;
+    
+}
+hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.link_list li a {
+    display: block;
+    padding: 40px; 
+}
+   
+
+a {
+    font-family: var(--paragraph-font);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #ffffff;
+    text-decoration: none;
+}
+.link_list {
+    display: flex;
+  justify-content: left;
+  margin-left: 20%;
+}
+ .adresse {
+        display: flex;
+        align-items: center;
+        margin-left: 20%;
+        padding-left: 40px;
+    }
+     .adresse img {
+        margin-right: 20px;
+    }
+    #reberbanegade {
+        font-family: var(--paragraph-font);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #ffffff;
+    }
+    .adresse li {
+        font-family: var(--paragraph-font);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #ffffff;
+    }
+    dl {
+        display: grid;
+        grid-template-columns: max-content auto;
+    }
+    dt {
+        grid-column-start: 1;
+    }
+    dd {
+        grid-column-start: 2;
+        margin-left: 10px;
+    }
+ .aabningstider {
+        display: flex;
+        align-items: center;
+        margin-left: 20%;
+        padding-left: 40px;
+        padding-top: 50px;
+    }
+     .aabningstider img {
+        margin-right: 20px;
+    }
+     .aabningstider dl {
+        font-family: var(--paragraph-font);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #ffffff;
+    }
+
+ .telefon {
+        display: flex;
+        align-items: center;
+        margin-left: 20%;
+        padding-left: 40px;
+    }
+     .telefon img {
+        margin-right: 20px;
+    }
+    .telefon li {
+        font-family: var(--paragraph-font);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #ffffff;
+    }
+.fax {
+        display: flex;
+        align-items: center;
+        margin-left: 20%;
+        padding-left: 40px;
+        padding-top: 30px;
+    }
+     .fax img {
+        margin-right: 20px;
+    }
+    .fax li {
+        font-family: var(--paragraph-font);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #ffffff;
+    
+    }
+.mail {
+        display: flex;
+        align-items: center;
+        margin-left: 20%;
+        padding-left: 40px;
+        padding-top: 30px;
+    }
+     .mail img {
+        margin-right: 20px;
+    }
+    .mail li {
+    font-family: var(--paragraph-font);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #ffffff;
+    }
+
+.SoMelogo {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding-bottom: 2rem;
+
+}
+.copyright p {
+     font-family: var(--paragraph-font);
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #ffffff7a;
+    display: block;
+    text-align: center;
+}
+
+</style>

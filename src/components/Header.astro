@@ -2,7 +2,7 @@
 import '../style.css'
 ---
 
-<header>
+<header class="desktopheader">
     <a href="/index" class="logo">
         <img src="/icons/logofarvetekst.svg" alt="logo">
     </a>
@@ -15,7 +15,7 @@ import '../style.css'
 
 <style>
 
-    header {
+    .desktopheader {
         max-width: 1600px;
         height: 150px;
         margin: 0 auto;
@@ -24,7 +24,8 @@ import '../style.css'
         align-items: center;
     }
     .logo {
-        padding: 10px;
+        padding: 20px 10px 10px 10px;
+        
     }
     ul {
         display: flex;
@@ -43,8 +44,8 @@ import '../style.css'
     a:hover {
         color: var(--light-blue);
     }
-    @media (max-width: 768px){
-        header{
+    @media (max-width: 460px){
+        .desktopheader{
             display: none;
         }
     }

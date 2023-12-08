@@ -1,0 +1,77 @@
+---
+import '../style.css'
+---
+
+<header>
+    <a href="" class="logo">
+        <img src="/icons/logofarvetekst.svg" alt="">
+    </a>
+    <div class="burgermenu">
+        <span class="line"></span>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Forside</a></li>
+            <li><a href="#">Åbningstider</a></li>
+            <li><a href="#">Om apoteket</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    header {
+        display: flex;
+        height: 80px;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .burgermenu {
+        height: 50px;
+        width: 50px;
+        border-style: solid;
+        border-width: 0.5px;
+        border-radius: 6px;
+        border-color: var(--main-blue);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .line {
+        background-color: var(--main-blue);
+        width: 35px;
+        height: 2px;
+        display: inline-block;
+    }
+    nav {
+        top: 85px;
+        position: absolute;
+        width: 100vw;
+        height: 500px;
+        background-color: var(--dark-white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    li {
+        background-color: var(--bright-white);
+        width: 95vw;
+        text-align: center;
+        padding: 10px 0px;
+        border-radius: 10px;
+        list-style: none;
+        
+    }
+    a {
+        text-decoration: none;
+        color: var(--main-blue);
+    }
+    
+</style>

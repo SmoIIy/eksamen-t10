@@ -56,3 +56,9 @@ p, a {
     color: var(--black);
 }
 
+.icon {
+    width: 30px;
+    height: auto;
+    display: inline-block;
+}
+

@@ -5,10 +5,11 @@ import '../style.css'
 
 <footer class="footerparent">
 
+<div class="logodiv">
 <a class="logohvidtekst" href="index.astro"><img src="../../public/icons/logohvidtekst.svg" alt="Logo"></a>
 
-<hr>
-
+</div>
+<hr class="hr1">
 <div class="link_list">
 <ul>
     <li><a href="index.html">Forside</a></li>
@@ -18,7 +19,7 @@ import '../style.css'
 </ul>
 </div>
 
-<hr>
+<hr class="hr">
 <div class="adresseaabningstider">
 <div class="adresse">
     <img src="../../public/icons/mapmarker.svg" alt="mapmarker">
@@ -41,7 +42,7 @@ import '../style.css'
 </dl>
 </div>
 </div>
-<hr>
+<hr class="hr">
 
 
 <div class="tlffaxmail">
@@ -70,7 +71,7 @@ import '../style.css'
 
 </div>
 
-<hr>
+<hr class="hr">
 
 <div class="SoMelogo">
     <a href="https://www.facebook.com/amagerbroapo/?locale=da_DK"><img src="../../public/icons/facebooklogo.svg" alt="facebook"></a>
@@ -252,6 +253,37 @@ a {
     color: #ffffff7a;
     display: block;
     text-align: center;
+}
+@media (min-width: 750px) {
+    .footerparent {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+    .logodiv { grid-area: 1 / 1 / 2 / 2; }
+    .hr1 { grid-area: 1 / 2 / 2 / 5; }
+    .link_list { grid-area: 2 / 1 / 3 / 2; }
+    .tlffaxmail { grid-area: 2 / 2 / 3 / 3; }
+    .adresseaabningstider { grid-area: 2 / 3 / 3 / 4; }
+    .SoMelogo { grid-area: 2 / 4 / 3 / 5; } 
+
+
+
+
+    .hr {
+        display: none;
+    }
+   hr {
+  display: block;
+  height: 1px;
+  border: none;
+  background-color: #ffffff;
+}
+.copyright {
+display: flex;
+justify-content: center;
+}
+
 }
 
 </style>

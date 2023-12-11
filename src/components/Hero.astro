@@ -1,43 +1,57 @@
 ---
 import '../style.css'
-import heroImg from "../../public/hero_placeholder.png"
+
 ---
 
 <div class="parent">
 
-<div class="heroimage">
 
+  <div class="heroimageparent">
+<div class="heroimage">
+<img src="/hero_placeholder.png" alt="hero">
 </div>
+</div>
+
 
 <div class="indholdsboks">
 
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis soluta voluptatum ea, autem rerum architecto deleniti harum eius consequuntur doloribus cum qui corporis dolores repudiandae eos, at debitis, quis tempora?</p>
+
+
+
+
+
+
+
 </div>
 
 </div>
-<!-- <img src={heroImg.src} alt="test"> -->
+
 
 
 
 <style>
-
 .heroimage {
-    background-image: url(/public/hero_placeholder.png);
-
-    height: 50%;
-
-  
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+display: flex;
+justify-content: center;
+justify-items: center;
+width: 100%;
+object-fit: cover;
 }
-
+ .heroimage img {
+    width: 100%;
+    max-width: 100%;
+  }
+.heroimageparent {
+  width: 100vw;
+  height: 500px;
+}
 .indholdsboks {
     background-color: rgb(255, 255, 255);
     padding: 100px;
     margin: 50px;
    filter: drop-shadow(0 0 1rem rgb(0, 0, 0));
+   min-height: 800px;
 }
 
 

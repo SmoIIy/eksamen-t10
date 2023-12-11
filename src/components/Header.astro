@@ -10,6 +10,7 @@ import '../style.css'
         <li><a href="#">Åbningstider</a></li>
         <li><a href="#">Om apoteket</a></li>
         <li><a href="#">Kontakt</a></li>
+        <li><a href="#">Personale</a></li>
     </ul>
 </header>
 
@@ -35,6 +36,19 @@ import '../style.css'
     }
     li {
         list-style: none;
+    }
+    li:after {
+        content: '';
+        margin-top: 1px;
+        width: 0px;
+        height: 2px;
+        background-color: var(--light-blue);
+        display: block;
+        transition: all 200ms ease-in-out;
+
+    }
+    li:hover::after {
+        width: 100%;
     }
     a {
         text-decoration: none;

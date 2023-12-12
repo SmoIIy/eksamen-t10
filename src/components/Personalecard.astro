@@ -1,22 +1,23 @@
 ---
 
- 
+const id = Math.random().toString(36).slice(2, 11);
 //const { href, title, body } = Astro.props;
 ---
-
-<li class="link-card">
-	<div class="img-container">
-		<img class="image" src="/billede.png" alt="">
-		<p class="body">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in lobortis nunc, id posuere mauris. Sed vel risus vitae ante tincidunt cursus eu et eros. Cras laoreet nisi at est semper posuere.
-		</p>
-		<div class="overlay"></div>
-	</div>
-	<div class="text-box">
-		<h2>Navn</h2>
-		<p>Titel</p>
-	</div>
-</li>
+<astro-card>
+	<li	 class="link-card">
+		<div class="img-container">
+			<img class="image" src="/billede.png" alt="">
+			<p class="body">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in lobortis nunc, id posuere mauris. Sed vel risus vitae ante tincidunt cursus eu et eros. Cras laoreet nisi at est semper posuere.
+			</p>
+			<div class="overlay"></div>
+		</div>
+		<div class="text-box">
+			<h2>Navn</h2>
+			<p>Titel</p>
+		</div>
+	</li>
+</astro-card>	
 <style>
 	.link-card {
 		position: relative;
@@ -28,6 +29,8 @@
 		box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
 		cursor: pointer;
 		margin: 10px;
+		background-color: var(--bright-white);
+		transition: all 100ms ease;
 	}
 	.link-card:hover {
 		box-shadow:  0px 4px 4px 2px rgba(0, 0, 0, 0.75);
@@ -56,7 +59,7 @@
 		bottom: 0;
 		transition: all 400ms ease;
 	}
-	.overlay.is-active, .image.is-active{
+	.overlay.is-active-1, .image.is-active-1{
 		bottom: 115px;
 	}
 
@@ -83,15 +86,27 @@
 </style>
 
 <script>
-	window.onload = function() {
-		const card = document.querySelector('.link-card');
-		const img = document.querySelector('.image');
-    	const overlay = document.querySelector('.overlay');
-    		card.addEventListener('click', function(){
-			img.classList.toggle('is-active')
-        	card.classList.toggle('is-active')
-        	overlay.classList.toggle('is-active')
-			
-    	});
-	}
+	//class bruges her, til at differencere hver instance af komponentet
+	//så hver af dem kan have sin egen funktionalitet.
+	//constructoren af classen skaber en instans af komponentet, med koden nedenfor
+	//inkluderet
+		class Personalecard extends HTMLElement {
+			constructor(){
+				super();
+				//variabler 
+				//'this' keywoarded refererer til den specifikke instans
+				const card = this.querySelector('li');
+				const img = this.querySelector('.image');
+				const overlay = this.querySelector('.overlay');
+				//tilføj eventlistener
+				card.addEventListener('click', () => {
+						//toggle class med animation
+						img.classList.toggle('is-active-1')
+        				card.classList.toggle('is-active-1')
+        				overlay.classList.toggle('is-active-1')
+						console.log("test")
+				});
+		}
+		}
+		customElements.define('astro-card', Personalecard);
 </script>

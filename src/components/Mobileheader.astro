@@ -36,6 +36,8 @@ import '../style.css'
         justify-content: space-between;
         align-items: center;
         padding: 10px;
+        background-color: var(--bright-white);
+        z-index: 10;
 
     }
     .logo {
@@ -133,12 +135,20 @@ import '../style.css'
 </style>
 
 <script>
-    window.onload = function (){
-    const menuBtn = document.querySelector('.burgermenu');
-    const mobileMenu = document.querySelector('nav');
-    menuBtn.addEventListener('click', function(){
-        menuBtn.classList.toggle('is-active')
-        mobileMenu.classList.toggle('is-active')
+    //function til at håndtere burgermenu
+    //ville have lavet anonym function, men ser ikk ud til at man kan have flere af dem på samme tid
+
+    function burgermenu() {
+        //variables
+        const menuBtn = document.querySelector('.burgermenu');
+        const mobileMenu = document.querySelector('nav');
+        console.log("test");
+        //add eventlistener
+            menuBtn.addEventListener('click', function(){
+            //toggle is-active class
+            menuBtn.classList.toggle('is-active')
+            mobileMenu.classList.toggle('is-active')
     });
-}
+    }
+    burgermenu();
 </script>

@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Personalecard.astro';
 import Footercard from '../components/Footercard.astro'
 import Header from '../components/Header.astro';
 import Mobileheader from '../components/Mobileheader.astro';
@@ -8,6 +7,7 @@ import Personalecard from '../components/Personalecard.astro';
 import Hero from '../components/Hero.astro'
 import '../style.css'
 import Indholdsboks from '../components/Indholdsboks.astro'
+import Button from '../components/Button.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -18,13 +18,10 @@ import Indholdsboks from '../components/Indholdsboks.astro'
 		<Indholdsboks></Indholdsboks>
 
 		<Personalecard/>
+		<Button href="#" title="Medicin To Go" body="Få medicin leveret til døren"/>
 	</main>
-
-
 	<Footercard/>
-	
 </Layout>
 
 <style>
-
 </style>

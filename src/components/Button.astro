@@ -1,0 +1,93 @@
+---
+import '../style.css';
+const {title, body, href} = Astro.props;
+---
+
+<a href={href} class="button">
+    <div class="left">
+        <h2>{title}</h2>
+        <p>{body}</p>
+    </div>
+    <div class="right">
+        <img src='/icons/rightarrow.svg' alt="triangle">
+    </div>
+</a>
+
+<style>
+    .button {
+        position: relative;
+        display: block;
+        width: 420px;
+        height: 100px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        background: linear-gradient(90deg, #284779 1.43%, #305A9C 97.13%);
+        text-decoration: none;
+        padding: 8px;
+        overflow: hidden;
+    }
+    /* Animate Pressed */
+    .button:active {
+        filter: brightness(0.9)
+    }
+    /* animate hover */
+    .button:hover .right {
+        clip-path: polygon(55% 0%, 100% 0%, 100% 100%, 25% 100%);
+    }
+
+    h2 {
+        color: white;
+        margin-left: 15px;
+        margin-top: 15px;
+        font-family: var(--header-font);
+    }
+    p {
+        color: white;
+        font-weight: 100;
+        font-size: 1rem;
+        margin-left: 15px;
+    }
+    .left {
+        position: relative;
+    }
+    .right {
+        position: absolute;
+        height: 100%;
+        width: 35%;
+        right: 0;
+        top: 0;
+        background: linear-gradient(90deg, #284779 1.43%, #305A9C 97.13%);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        clip-path: polygon(35% 0%, 100% 0%, 100% 100%, 0% 100%);
+        transition: all 400ms ease-in-out;
+        
+    }
+    .right img{
+        height: 50%;
+        width: 60%;
+    }
+    /* Mobile */ 
+    @media (max-width: 460px) {
+        .button {
+            width: 280px;
+            height: 80px;
+        }
+        h2 {
+            font-size: 1.2rem;
+        }
+        p {
+            font-size: 0.9rem;
+        }
+        .right {
+            width: 25%;
+        }
+        .right img {
+            height: 40%;
+            width: 50%;
+            margin-right: 10px;
+            
+        }
+    }
+</style>

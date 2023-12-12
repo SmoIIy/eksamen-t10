@@ -9,6 +9,21 @@ import '../style.css'
 </div>
 </div>
 <style>
+
+.heroimageparent{
+position: relative;
+height: 500px;
+overflow: hidden;
+}
+
+.heroimage{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  transform: translateY(-25%);
+}
+
+@media (min-width: 750px) {
 .heroimageparent {
   width: 100vw;
   height: 500px;
@@ -30,5 +45,6 @@ import '../style.css'
 .heroimage img {
   width: 100%;
   max-width: 100%;
+}
 }
 </style>

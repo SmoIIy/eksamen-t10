@@ -3,56 +3,32 @@ import '../style.css'
 
 ---
 
-<div class="parent">
-
-
-  <div class="heroimageparent">
+<div class="heroimageparent">
 <div class="heroimage">
 <img src="/hero_placeholder.png" alt="hero">
 </div>
 </div>
-
-
-<div class="indholdsboks">
-
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis soluta voluptatum ea, autem rerum architecto deleniti harum eius consequuntur doloribus cum qui corporis dolores repudiandae eos, at debitis, quis tempora?</p>
-
-
-
-
-
-
-
-</div>
-
-</div>
-
-
-
-
 <style>
-.heroimage {
-display: flex;
-justify-content: center;
-justify-items: center;
-width: 100%;
-object-fit: cover;
-}
- .heroimage img {
-    width: 100%;
-    max-width: 100%;
-  }
 .heroimageparent {
   width: 100vw;
   height: 500px;
-}
-.indholdsboks {
-    background-color: rgb(255, 255, 255);
-    padding: 100px;
-    margin: 50px;
-   filter: drop-shadow(0 0 1rem rgb(0, 0, 0));
-   min-height: 800px;
+  overflow: hidden;
+  position: relative;
 }
 
+.heroimage {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
+.heroimage img {
+  width: 100%;
+  max-width: 100%;
+}
 </style>

@@ -26,10 +26,15 @@ const {title, body, href} = Astro.props;
         padding: 8px;
         overflow: hidden;
     }
+    /* Animate Pressed */
+    .button:active {
+        filter: brightness(0.9)
+    }
     /* animate hover */
     .button:hover .right {
         clip-path: polygon(55% 0%, 100% 0%, 100% 100%, 25% 100%);
     }
+
     h2 {
         color: white;
         margin-left: 15px;
@@ -63,5 +68,26 @@ const {title, body, href} = Astro.props;
         height: 50%;
         width: 60%;
     }
-
+    /* Mobile */ 
+    @media (max-width: 460px) {
+        .button {
+            width: 280px;
+            height: 80px;
+        }
+        h2 {
+            font-size: 1.2rem;
+        }
+        p {
+            font-size: 0.9rem;
+        }
+        .right {
+            width: 25%;
+        }
+        .right img {
+            height: 40%;
+            width: 50%;
+            margin-right: 10px;
+            
+        }
+    }
 </style>

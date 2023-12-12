@@ -5,6 +5,17 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Indholdsboks from '../components/Indholdsboks.astro';
 import Personalecard from '../components/Personalecard.astro';
+//Fetch Database
+const response = await fetch("https://hnrcndxoquhelmpaqheh.supabase.co/rest/v1/personaleliste", {
+	method: "GET",
+	headers: {
+	apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhucmNuZHhvcXVoZWxtcGFxaGVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTM4MjI5MTksImV4cCI6MjAwOTM5ODkxOX0.Kj0vgWH3imfxSBjrhKN9746mppt3v9ldhd1y2ugyfyc"
+	},
+}
+);
+//Parse json
+const data = await response.json();
+//console.log(data);
 ---
 <Layout title='test'>
     <Mobileheader/>
@@ -18,5 +29,5 @@ import Personalecard from '../components/Personalecard.astro';
 </Layout>
 
 <script>
-    
+
 </script>

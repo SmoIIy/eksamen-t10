@@ -13,11 +13,11 @@ import '../style.css'
 <hr class="hr1">
 <div class="link_list">
 <ul>
-    <li><a href="index.html">Forside</a></li>
-    <li><a href="aabningstider.html">Åbningstider</a></li>
-    <li><a href="omos.html">Om apoteket</a></li>
-    <li><a href="kontakt.html">Kontakt</a></li>
-    <li><a href="personale.html">Personale</a></li>
+    <li><a href="/">Forside</a></li>
+    <li><a href="/aabningstider">Åbningstider</a></li>
+    <li><a href="/om">Om apoteket</a></li>
+    <li><a href="/kontakt">Kontakt</a></li>
+    <li><a href="/personale">Personale</a></li>
 </ul>
 </div>
 
@@ -116,6 +116,20 @@ color: var(--bright-white);
     display: block;
     padding: 20px; 
 }
+/* Animate hover links*/ 
+.link_list li:after {
+        content: '';
+        margin-top: 1px;
+        width: 0px;
+        height: 2px;
+        background-color: var(--bright-white);
+        display: block;
+        transition: all 200ms ease-in-out;
+
+    }
+    .link_list li:hover::after {
+        width: 50%;
+    }
    
 
 a {
@@ -149,11 +163,11 @@ a {
     }
     .adresse li {
         font-family: var(--paragraph-font);
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: #ffffff;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: #ffffff;
     }
     dl {
         display: grid;
@@ -178,11 +192,11 @@ a {
     }
      .aabningstider dl {
         font-family: var(--paragraph-font);
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: #ffffff;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: #ffffff;
     }
 
  .telefon {
@@ -214,11 +228,11 @@ a {
     }
     .fax li {
         font-family: var(--paragraph-font);
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: #ffffff;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: #ffffff;
     
     }
 .mail {
@@ -232,12 +246,12 @@ a {
         margin-right: 20px;
     }
     .mail li {
-    font-family: var(--paragraph-font);
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: #ffffff;
+        font-family: var(--paragraph-font);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: #ffffff;
     }
 
 .SoMelogo {

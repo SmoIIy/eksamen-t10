@@ -16,10 +16,27 @@ import Button from '../components/Button.astro';
 	<main>
 		<Hero/>
 		<Indholdsboks>
-			<h1>HEJ</h1>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam pariatur facere nostrum ex reprehenderit corporis non a commodi illo in, hic eius voluptatibus exercitationem optio unde. Quibusdam quasi magni laborum!</p>
+			<h1>Velkommen til Øens Apotek</h1>
+			<p>Beliggende i Amagercenteret på stueetagen bliver du budt velkommen af vores erfarne og imødekommende personale, som brænder for at bistå dig med et smil på læben og imødekomme dine individuelle sundhedsbehov. Hos Øens kan du forvente nærvær, engagement og en skræddersyet tilgang til rådgivning, sparring og forskellige produkter, der passer præcist til dine behov.</p>
+			<p>Vores sortiment af varer og medicin omfatter nøje udvalgte produkter af højeste kvalitet og sikkerhed indenfor sundhedsbranchen. Lagerstatus opdateres dagligt, så du kan opleve en effektiv og gnidningsløs vej mod optimal sundhed, velvære og mental balance.</p>
 			
-			<Button href="#" title="Medicin To Go" body="Få medicin leveret til døren"/>
+<div class="knapper">
+			<h2>Få leveret hjem</h2> 
+
+				<div class="knapperne">
+						<div class="knap1">
+							
+							<Button href="#" title="Medicin online" body="gå til dinApoteker.dk"/>
+						</div>
+						<div class="knap2">
+							<Button href="#" title="Medicin To go" body="Få medicin leveret til døren"/>
+						</div>
+
+				</div>
+</div>
+			<h2>Vaccination</h2>
+			<p>På Øens Apotek tilbyder vi vaccinationer for både Influenza og Covid-19, og det foregår hver mandag og fredag. For Covid-19 vaccination bedes du venligst bestille tid på www.vacciner.dk. Alternativt kan du kontakte os på apoteket samme dag, hvis du ønsker at blive vaccineret uden forudgående tidsbestilling. Vil vi hurtigst muligt vurdere muligheden for at imødekomme din anmodning.</p>
+			<p>Telefon: 32 57 83 83</p>
 		</Indholdsboks>
 
 		
@@ -29,4 +46,62 @@ import Button from '../components/Button.astro';
 </Layout>
 
 <style>
+p {
+	margin: 10px;
+	padding: 10px;
+}
+h1 {
+	margin: 10px;
+	padding: 10px;
+}
+h2 {
+	margin: 10px;
+	padding: 10px;
+}
+.knapper {
+  background-color: var(--dark-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.knapperne {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+.knap1 {
+	margin-bottom: 20px;
+}
+.knap2 {
+	margin-bottom: 20px;
+}
+
+@media (min-width: 460px) {
+  .knapperne {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .knap1,
+  .knap2 {
+    margin: 0 10px;
+  }
+
+  .knapper {
+    background-color: var(--bright-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+
+
+
 </style>

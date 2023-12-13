@@ -1,20 +1,20 @@
 ---
 
 
-//const { href, title, body } = Astro.props;
+const { data } = Astro.props;
 ---
 <astro-card>
 	<li	 class="link-card">
 		<div class="img-container">
-			<img class="image" src="/billede.png" alt="">
+			<img class="image" src={`/images/${data.imageurl}`} alt="portræt">
 			<p class="body">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in lobortis nunc, id posuere mauris. Sed vel risus vitae ante tincidunt cursus eu et eros. Cras laoreet nisi at est semper posuere.
+				{data.body}
 			</p>
 			<div class="overlay"></div>
 		</div>
 		<div class="text-box">
-			<h2>Navn</h2>
-			<p>Titel</p>
+			<h2>{data.name}</h2>
+			<p>{data.title}</p>
 		</div>
 	</li>
 </astro-card>	
@@ -49,6 +49,7 @@
 		z-index: 2;
 		bottom: 0;
 		transition: all 400ms ease;
+		object-fit: cover;
 	}
 	.overlay {
 		position: absolute;

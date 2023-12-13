@@ -2,21 +2,26 @@
 import '../style.css'
 ---
 
-<header class="desktopheader">
-    <a href="/" class="logo">
-        <img src='/icons/logofarvetekst.svg' alt="logo">
-    </a>
-    <ul>
-        <li><a href="#">Åbningstider</a></li>
-        <li><a href="#">Om apoteket</a></li>
-        <li><a href="#">Kontakt</a></li>
-        <li><a href="#">Personale</a></li>
-    </ul>
+<header class="container">
+    <div class="desktopheader">
+        <a href="/" class="logo">
+            <img src='/icons/logofarvetekst.svg' alt="logo">
+        </a>
+        <ul>
+            <li><a href="/aabningstider">Åbningstider</a></li>
+            <li><a href="/om">Om apoteket</a></li>
+            <li><a href="/kontakt">Kontakt</a></li>
+            <li><a href="/personale">Personale</a></li>
+        </ul>
+    </div>
 </header>
 
 <style>
-
+    .container {
+        background-color: var(--bright-white);
+    }
     .desktopheader {
+        background-color: var(--bright-white);
         max-width: 1600px;
         height: 150px;
         margin: 0 auto;

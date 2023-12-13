@@ -1,11 +1,11 @@
 ---
 import '../style.css'
-
+const {image} = Astro.props;
 ---
 
 <div class="heroimageparent">
   <div class="heroimage">
-    <img src="/hero_placeholder2.png" alt="hero">
+    <img src={image} alt="hero">
   </div>
 </div>
 

@@ -5,6 +5,7 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Indholdsboks from '../components/Indholdsboks.astro';
 import Personalecard from '../components/Personalecard.astro';
+import Footercard from '../components/Footercard.astro';
 //Fetch Database
 const response = await fetch("https://hnrcndxoquhelmpaqheh.supabase.co/rest/v1/personaleliste", {
 	method: "GET",
@@ -17,17 +18,55 @@ const response = await fetch("https://hnrcndxoquhelmpaqheh.supabase.co/rest/v1/p
 const data = await response.json();
 //console.log(data);
 ---
-<Layout title='test'>
+<Layout title='Personale'>
     <Mobileheader/>
     <Header/>
     <main>
         <Hero/>
-        <Indholdsboks/>
-        <Personalecard/>
-        <Personalecard/>
-    </main> 
-</Layout>
+        <Indholdsboks>
+            <h1>Personale</h1>
+            <section class="personel">
+                {
+                    data.map((thing) =>{
+                        return <Personalecard data={thing} />
+                    })
+                }
+            </section>
+            <section class="info">
+                <h2>Vores Medarbejdere</h2>
+                <p>Den gode samhørighed på Øens træder tydeligt frem på forskellige måder. Konstruktiv dialog væver sig gennem vores arbejdsplads som en konstant tråd, og prioriteringen   af arbejdsmiljøet er en hjørnesten hos os. Vi tror på, at vi som individer kan levere den mest optimale kundeservice, når vores eget velbefindende er i fokus.
+                    <br>
+                    <br>    
+                    En anden afgørende faktor i vores miljø er indretningen, som er omhyggeligt udformet. Designmæssigt er vores apotek skabt som en topmoderne facilitet, udstyret med en avanceret robot til varehåndtering og diskretionsområder, hvilket sikrer, at omgivelserne er både effektive, praktiske og behagelige for både personalet og vores kunder.</p>
+            </section>
+        </Indholdsboks>
 
+    </main> 
+    <Footercard/>
+</Layout>
+<style> 
+    .personel {
+        justify-content: space-evenly;
+        margin: 25px auto;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 45px;
+        padding: 15px;
+    }
+    .info {
+        width: 70%;
+        margin: 25px auto;
+    }
+    @media (max-width: 460px) {
+        .info {
+            width: 90%;
+        }
+        h1 {
+            margin: 25px auto;
+        }
+    }
+</style>
 <script>
 
 </script>

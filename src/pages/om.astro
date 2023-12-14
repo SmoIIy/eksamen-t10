@@ -36,7 +36,7 @@ import Footercard from '../components/Footercard.astro';
                 <div>
                     <h2>Faglighed</h2>
                     <p>Vores team består af i alt 35 dedikerede medarbejdere, der spænder over forskellige fagområder, lige fra farmaceuter til servicemedarbejdere. Som en integreret del af vores vision inkluderer vi altid mindst 6 farmakonomelever og 2 farmaceutstuderende, da vi ser det som afgørende for den kontinuerlige faglige udvikling.</p>
-                    <p>Gennem vores ledelsesstil stræber vi efter at give vores medarbejdere maksimal indflydelse og ansvar inden for deres respektive funktioner. Dette skaber en ramme, hvor vores team kan vokse fagligt og påtage sig ansvar med tillid. Vi er opmærksomme på, at en del af vores kundegruppe består af ældre eller handicappede borgere, som måske har udfordringer med at besøge apoteket fysisk. Derfor har vi dedikerede bude til rådighed om eftermiddagen, klar til at servicere vores kunder i apotekets nærområde. Disse bude står til din disposition for at levere din medicin, nødvendige produkter og mere, så du kan nyde optimal bekvemmelighed.</p>
+                    <p>Gennem vores ledelsesstil stræber vi efter at give vores medarbejdere maksimal indflydelse og ansvar inden for deres respektive funktioner. Dette skaber en ramme, hvor vores team kan vokse fagligt og påtage sig ansvar med tillid. Vi er opmærksomme på, at en del af vores kundegruppe består af ældre eller handicappede borgere, som måske har udfordringer med at besøge apoteket fysisk. Derfor har vi dedikerede bude til rådighed om eftermiddagen, klar til at servicere vores kunder i apotekets nærområde.</p>
                 </div>
             </article>
         </section>
@@ -48,12 +48,12 @@ import Footercard from '../components/Footercard.astro';
 <style>
 img {
     width: 100%;
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 1.5%;
 }
 section {
-    margin: 0 1rem 1.5rem;
+    margin: 0 2rem 0;
 }
 section h1 {
         margin: 0 2rem 1.75rem;
@@ -63,49 +63,48 @@ section h1 {
     background-color: var(--dark-white);
   	display: flex;
   	flex-direction: column;
-    padding-top: 2rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-bottom: 1rem;
+    padding: 2rem 3rem 1rem;
 }
 #service-section {
-    margin: 0 .35rem .35rem;
+    margin: 0 .1rem .1rem;
     margin-bottom: 4rem;
 }
 article, section, h3 {
     margin-bottom: 2rem;
 }
 h2 {
-    margin-bottom: .5rem;
+    margin-bottom: .25rem;
 }
 p {
     margin-bottom: 3rem;
 }
 /* Større skærme */
 @media screen and (min-width: 600px) {
-    #service-section {
-    margin-bottom: 4.5rem;
+#service-section, #vision-section {
+    margin: 0 8rem;
 }
-    .service-boks {
+#service-section {
+    margin-bottom: 2.75rem;
+}
+.service-boks {
         background-color: transparent;
-    }
-    #vision-section article {
+}
+#vision-section article {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin-bottom: 1.5rem;
-    }
-    #vision-section article:nth-child(even) img { /* Gælder for lige img-elementer, der er child-elementer af article-elementer */
+}
+#vision-section article:nth-child(even) img { /* Gælder for lige img-elementer, der er child-elementer af article-elementer */
         grid-column: 2;
         grid-row: 1;
-    }
-    #vision-section article:first-child div {
+}
+#vision-section article:first-child div {
         margin-left: 4rem;
-    }
-    div {
+}
+div {
         margin-right: 4rem;
-    }
-    h2 {
-    margin-bottom: 1rem;
+}
+section h1 {
+        margin-bottom: 1.25rem;
 }
 }
 </style>

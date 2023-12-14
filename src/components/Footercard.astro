@@ -90,9 +90,21 @@ import '../style.css'
 </footer>
 
 <style>
-    footer {
-        background-color: var(--main-blue);
+    /*Responsive desktop */
+    @media (max-width: 1600px) and (min-width: 460px) {
+        .footerparent {
+            max-width: 1200px;
+        }
+}       
+    @media (min-width: 1600px) {
+        .footerparent {
+            max-width: 1450px;
+            font-size: 0.9rem;
+        }
     }
+footer {
+        background-color: var(--main-blue);
+}
 .footerparent {
     background-color: var(--main-blue);
     padding: 20px;

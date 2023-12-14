@@ -30,7 +30,7 @@ import Footercard from '../components/Footercard.astro'
                         </div>
                     </div>
 
-                    <span class="grid_item">
+                    <div class="grid_item">
                         <img class="svg"src="/icons/orange_clock.svg" alt="klokke">
                         <div>
                             <h3>Åbningstider:</h3>
@@ -38,9 +38,9 @@ import Footercard from '../components/Footercard.astro'
                             <p><strong>Lørdag: </strong>10.00 – 17.00</p>
                             <p><strong>Søndag: </strong> Lukket</p>
                         </div>
-                    </span>
+                    </div>
 
-                    <span class="grid_item">
+                    <div class="grid_item">
                         <img class="svg"src="/icons/orange_mail.svg" alt="mail">
                         <div>
                             <h3>Kontaktinformation:</h3>
@@ -48,9 +48,9 @@ import Footercard from '../components/Footercard.astro'
                             <p><strong>Fax: </strong>32 57 40 89</p>
                             <p><strong>E-mail: </strong>243ka@apoteket.dk</p>
                         </div>
-                    </span>
+                    </div>
 
-                    <span class="grid_item">
+                    <div class="grid_item">
                         <img class="svg"src="/icons/orange_tlf.svg" alt="telefon">
                         <div>
                             <h3>Telefontid:</h3>
@@ -59,7 +59,7 @@ import Footercard from '../components/Footercard.astro'
                             <p><strong>Lørdag: </strong>10.00 - 14.00</p>
                             <p><strong>Søndag:</strong> Lukket</p>
                         </div>
-                    </span>
+                    </div>
                 </div>
             
             	   
@@ -114,10 +114,12 @@ import Footercard from '../components/Footercard.astro'
     align-items: center;
     margin-bottom: 10px;
     padding: 10px;
+    align-items: flex-start;
 }
 
 .svg{
-    width: 80%;
+    width: 70%;
+    padding-top: 15%;
 }
 
 @media (min-width: 460px) {
@@ -125,9 +127,8 @@ import Footercard from '../components/Footercard.astro'
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin: auto;
-        gap: 5%;
-        padding: 5%;
         background-color: #e9e9e900;
+        padding: 2% 10% 2% 10%;
     }
 
     .indhold{
@@ -139,6 +140,8 @@ import Footercard from '../components/Footercard.astro'
      .grid_item {
     display: grid;
     grid-template-columns: 1fr 9fr;
+    align-content: flex-start;
+
 }
 
     .p{
@@ -147,7 +150,11 @@ import Footercard from '../components/Footercard.astro'
 
       h2 {
     padding: 70px 10px 20px 10px;
-}
+    }
+
+    .svg{
+        width: 105%;
+    }
 }
 
 </style>

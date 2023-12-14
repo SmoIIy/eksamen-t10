@@ -4,6 +4,7 @@ import Mobileheader from '../components/Mobileheader.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Indholdsboks from '../components/Indholdsboks.astro';
+import Footercard from '../components/Footercard.astro'
 
 
 ---
@@ -11,12 +12,149 @@ import Indholdsboks from '../components/Indholdsboks.astro';
     <Mobileheader/>
     <Header/>
     <main>
-        <Hero image="hero_placeholder3.png"/>
+        <Hero image="/hero_placeholder3.png"/>
         <Indholdsboks>
+        <div class="indhold">
+         
+            <h1>Kontakt</h1>
+            <p>Hvis du har behov for hjælp, sparring eller rådgivning vedrørende dine spørgsmål eller behandling, er vi klar til at assistere dig så hurtigt som muligt i vores ledige timer. Vi sætter din tryghed og sikkerhed i højsædet, så tøv ikke med at kontakte os, uanset hvad din situation er. Vi stræber efter at finde en løsning, der er skræddersyet til dig.</p>	
+                <h2>Find vores informationer her:</h2>
+                <div class="grid_info">
+                	
+                    <div class="grid_item">
+                        <img class="svg"src="/icons/orange_pin.svg" alt="pin">
+                        <div>
+                            <h3>Besøg</h3>
+                            <p><strong>Reberbanegade 3,</strong></p>
+                            <p>2300 København S</p>
+                        </div>
+                    </div>
+
+                    <div class="grid_item">
+                        <img class="svg"src="/icons/orange_clock.svg" alt="klokke">
+                        <div>
+                            <h3>Åbningstider:</h3>
+                            <p><strong>Mandag - Fredag:</strong> 9.30 – 19.00</p>
+                            <p><strong>Lørdag: </strong>10.00 – 17.00</p>
+                            <p><strong>Søndag: </strong> Lukket</p>
+                        </div>
+                    </div>
+
+                    <div class="grid_item">
+                        <img class="svg"src="/icons/orange_mail.svg" alt="mail">
+                        <div>
+                            <h3>Kontaktinformation:</h3>
+                            <p><strong>Telefon:</strong> 32 57 83 83</p>
+                            <p><strong>Fax: </strong>32 57 40 89</p>
+                            <p><strong>E-mail: </strong>243ka@apoteket.dk</p>
+                        </div>
+                    </div>
+
+                    <div class="grid_item">
+                        <img class="svg"src="/icons/orange_tlf.svg" alt="telefon">
+                        <div>
+                            <h3>Telefontid:</h3>
+                            <p><strong>Hverdage: </strong>09.30 -
+                            11.30 & 12.30 - 17.30</p>
+                            <p><strong>Lørdag: </strong>10.00 - 14.00</p>
+                            <p><strong>Søndag:</strong> Lukket</p>
+                        </div>
+                    </div>
+                </div>
             
+            	   
+        </div>
         </Indholdsboks>
 
-
-
     </main> 
+    <Footercard/>
 </Layout>
+
+<style>
+
+    .grid_info{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: auto;
+        background-color: #E9E9E9;
+        padding: 5% 10% 20% 10%;
+        gap: 3%;
+    }
+    p{
+        margin-left: 10px;
+        margin-right: 10px;
+	    padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    h1{
+    margin: 10px;
+	padding: 10px;
+}
+
+
+
+
+  h2 {
+    padding: 50px 10px 20px 10px;
+    margin: 0 10px;
+    line-height: 30px;
+}
+
+    h3{
+        margin-left: 10px;
+        margin-right: 10px;
+	    padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .grid_item {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    align-items: flex-start;
+}
+
+.svg{
+    width: 70%;
+    padding-top: 15%;
+}
+
+@media (min-width: 460px) {
+    .grid_info{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: auto;
+        background-color: #e9e9e900;
+        padding: 2% 10% 2% 10%;
+    }
+
+    .indhold{
+        max-width: 75%;
+        margin: auto;
+        padding-bottom: 5%;
+    }
+
+     .grid_item {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    align-content: flex-start;
+
+}
+
+    .p{
+        font-size: 2rem;
+    }
+
+      h2 {
+    padding: 70px 10px 20px 10px;
+    }
+
+    .svg{
+        width: 105%;
+    }
+}
+
+</style>

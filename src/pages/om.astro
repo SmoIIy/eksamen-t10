@@ -5,17 +5,106 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Indholdsboks from '../components/Indholdsboks.astro';
 import Footercard from '../components/Footercard.astro';
-
 ---
 <Layout title='Om Apoteket'>
-    <Mobileheader/>
+  <Mobileheader/>
     <Header/>
-    <main>
-        <Hero image="hero_placeholder5.png"/>
-        <Indholdsboks/>
-
-
-
-    </main> 
-    <Footercard/>
+<main>
+    <Hero image="hero_placeholder5.png"/>
+    <Indholdsboks>
+        <section id="service-section">
+            <h1>Om apoteket</h1>
+            <div class="service-boks">
+            <h2>Personlig service</h2>
+            <p>Øens Apotek er en travl arbejdsplads, hvor der dagligt træffes mange vigtige beslutninger. Selvom vores arbejdsdag er fyldt med opgaver, er kundeservicen altid i centrum hos os. Vi er opmærksomme på at bevare fokus på kvalitet under alle omstændigheder, og vores personale er dedikerede og motiverede til at prioritere dig og dine behov. Med 10-12 erfarne medarbejdere klar til at assistere på apoteket har vi som målsætning at minimere ventetiden, så du kan føle dig tryg og sikker.</p>
+            <p>Vi har implementeret effektive processer, og resultaterne taler for sig selv:</p>
+            <h3>· 88% af vores kunder ekspederes inden for 10 minutter for receptpligtig medicin.</h3>
+            <h3>· 98% af vores kunder ekspederes inden for 10 minutter for håndkøbslægemidler.</h3>
+            </div>
+        </section>
+        <section id="vision-section">
+            <article>
+                <img src="images/vision_placeholder.jpg" alt="En farmaceut, der arbejder med medicin på et apotek">
+                <div>
+                    <h2>Vores vision</h2>
+                    <p>Historien om vores apotek på Amagerbro strækker sig tilbage til 1914. Som virksomhed retter vi vores fokus mod fremtiden og arbejder dagligt dag på at forbedre os inden for alle områder af vores fag. Ved at investere i efteruddannelse af vores medarbejdere sørger vi for altid at være opdaterede på udviklingen inden for alle nye typer medicin.</p>
+                    <p>Vi går aldrig på kompromis med kvaliteten af vores ydelser eller med at sætte menneskers behov i centrum. Derfor går vi på Øens trygt fremtiden i møde.</p>
+                </div>
+            </article>
+            <article>
+                <img src="images/faglighed_placeholder.jpg" alt="Lageret på et apotek">
+                <div>
+                    <h2>Faglighed</h2>
+                    <p>Vores team består af i alt 35 dedikerede medarbejdere, der spænder over forskellige fagområder, lige fra farmaceuter til servicemedarbejdere. Som en integreret del af vores vision inkluderer vi altid mindst 6 farmakonomelever og 2 farmaceutstuderende, da vi ser det som afgørende for den kontinuerlige faglige udvikling.</p>
+                    <p>Gennem vores ledelsesstil stræber vi efter at give vores medarbejdere maksimal indflydelse og ansvar inden for deres respektive funktioner. Dette skaber en ramme, hvor vores team kan vokse fagligt og påtage sig ansvar med tillid. Vi er opmærksomme på, at en del af vores kundegruppe består af ældre eller handicappede borgere, som måske har udfordringer med at besøge apoteket fysisk. Derfor har vi dedikerede bude til rådighed om eftermiddagen, klar til at servicere vores kunder i apotekets nærområde. Disse bude står til din disposition for at levere din medicin, nødvendige produkter og mere, så du kan nyde optimal bekvemmelighed.</p>
+                </div>
+            </article>
+        </section>
+    </Indholdsboks>
+</main> 
+<Footercard/>
 </Layout>
+
+<style>
+img {
+    width: 100%;
+    margin-bottom: 1.75rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 1.5%;
+}
+section {
+    margin: 0 2rem 2rem;
+}
+.service-boks {
+    background-color: var(--dark-white);
+  	display: flex;
+  	flex-direction: column;
+    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+}
+#service-section {
+    margin-bottom: 4rem;
+}
+article, section, h1, h3 {
+    margin-bottom: 2rem;
+}
+h1 {
+    margin-top: 1rem;
+    margin-bottom: 2.75rem;
+}
+h2 {
+    margin-bottom: .5rem;
+}
+p {
+    margin-bottom: 3rem;
+}
+/* Større skærme */
+@media screen and (min-width: 600px) {
+    #service-section {
+    margin-bottom: 4.5rem;
+}
+    .service-boks {
+        background-color: transparent;
+    }
+    #vision-section article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 1.5rem;
+    }
+    #vision-section article:nth-child(even) img { /* Gælder for lige img-elementer, der er child-elementer af article-elementer */
+        grid-column: 2;
+        grid-row: 1;
+    }
+    #vision-section article:first-child div {
+        margin-left: 4rem;
+    }
+    div {
+        margin-right: 4rem;
+    }
+    h2 {
+    margin-bottom: 1rem;
+}
+}
+</style>

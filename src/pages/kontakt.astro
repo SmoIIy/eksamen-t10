@@ -4,6 +4,7 @@ import Mobileheader from '../components/Mobileheader.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Indholdsboks from '../components/Indholdsboks.astro';
+import Footercard from '../components/Footercard.astro'
 
 
 ---
@@ -16,10 +17,76 @@ import Indholdsboks from '../components/Indholdsboks.astro';
             <h1>Kontakt</h1>
             <p>Hvis du har behov for hjælp, sparring eller rådgivning vedrørende dine spørgsmål eller behandling, er vi klar til at assistere dig så hurtigt som muligt i vores ledige timer. Vi sætter din tryghed og sikkerhed i højsædet, så tøv ikke med at kontakte os, uanset hvad din situation er. Vi stræber efter at finde en løsning, der er skræddersyet til dig.</p>	
             <h2>Find vores informationer her:</h2>	
+            <div>
+
+                <div class="grid_info">
+                    <span>
+                        <img src="/icons/telefon.svg" alt="telefon">
+                        <div>
+                            <h3>Besøg</h3>
+                            <p><strong>Reberbanegade 3,</strong></p>
+                            <p>2300 København S</p>
+                        </div>
+                    </span>
+
+                    <span>
+                        <img src="/icons/clock.svg" alt="klokke">
+                        <div>
+                            <h3>Åbningstider:</h3>
+                            <p><strong>Mandag - Fredag:</strong> 9.30 – 19.00</p>
+                            <p><strong>Lørdag: </strong>10.00 – 17.00</p>
+                            <p><strong>Søndag: </strong> Lukket</p>
+                        </div>
+                    </span>
+
+                    <span>
+                        <img src="/icons/mail.svg" alt="mail">
+                        <div>
+                            <h3>Kontaktinformation:</h3>
+                            <p><strong>Telefon:</strong> 32 57 83 83</p>
+                            <p><strong>Fax: </strong>32 57 40 89</p>
+                            <p><strong>E-mail: </strong>243ka@apoteket.dk</p>
+                        </div>
+                    </span>
+
+                    <span>
+                        <img src="/icons/telefon.svg" alt="telefon">
+                        <div>
+                            <h3>Telefontid:</h3>
+                            <p><strong>Hverdage: </strong>09.30 -
+                            11.30 & 12.30 - 17.30</p>
+                            <p><strong>Lørdag: </strong>10.00 - 14.00</p>
+                            <p><strong>Søndag:</strong> Lukket</p>
+                        </div>
+                    </span>
+                </div>
+      
+
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
             	
         </Indholdsboks>
 
 
 
     </main> 
+    <Footercard/>
 </Layout>
+
+<style>
+    
+
+    .grid_info{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 70%;
+        margin: auto;
+    }
+ul{
+    font-family:  var(--paragraph-font): 
+}
+
+</style>

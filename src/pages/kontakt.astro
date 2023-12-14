@@ -21,16 +21,16 @@ import Footercard from '../components/Footercard.astro'
                 <h2>Find vores informationer her:</h2>
                 <div class="grid_info">
                 	
-                    <span>
+                    <div class="grid_item">
                         <img class="svg"src="/icons/telefon.svg" alt="telefon">
                         <div>
                             <h3>Besøg</h3>
                             <p><strong>Reberbanegade 3,</strong></p>
                             <p>2300 København S</p>
                         </div>
-                    </span>
+                    </div>
 
-                    <span>
+                    <span class="grid_item">
                         <img class="svg"src="/icons/clock.svg" alt="klokke">
                         <div>
                             <h3>Åbningstider:</h3>
@@ -40,7 +40,7 @@ import Footercard from '../components/Footercard.astro'
                         </div>
                     </span>
 
-                    <span>
+                    <span class="grid_item">
                         <img class="svg"src="/icons/mail.svg" alt="mail">
                         <div>
                             <h3>Kontaktinformation:</h3>
@@ -50,7 +50,7 @@ import Footercard from '../components/Footercard.astro'
                         </div>
                     </span>
 
-                    <span>
+                    <span class="grid_item">
                         <img class="svg"src="/icons/telefon.svg" alt="telefon">
                         <div>
                             <h3>Telefontid:</h3>
@@ -76,22 +76,14 @@ import Footercard from '../components/Footercard.astro'
     .grid_info{
         display: grid;
         grid-template-columns: 1fr;
-        width: 70%;
         margin: auto;
         background-color: var( --dark-white:);
     }
-ul{
-    font-family:  var(--paragraph-font): 
-}
-    rect {
-    max-width: 100%;
-    height: auto;
-    fill: orange;
-}
-
     p{
-        margin: 10px;
-	    padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+	    padding-left: 10px;
+        padding-right: 10px;
     }
 
     h1{
@@ -102,16 +94,34 @@ ul{
 
     h2{
         padding-top: 5%;
-        margin: 10px;
-	    padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+	    padding-left: 10px;
+        padding-right: 10px;
     }
+
+
+    h3{
+        margin-left: 10px;
+        margin-right: 10px;
+	    padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .grid_item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
 @media (min-width: 460px) {
     .grid_info{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        width: 70%;
         margin: auto;
+        gap: 5%;
+        padding: 5%;
     }
 
     .indhold{
@@ -120,6 +130,11 @@ ul{
         padding-top: 1%;
         padding-bottom: 5%;
     }
+
+     .grid_item {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
 
     .p{
         font-size: 2rem;

@@ -13,14 +13,61 @@ import Footercard from '../components/Footercard.astro';
     <main>
         <div class="divider"></div>
         <Indholdsboks>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dolorum alias accusamus. Quas odit quidem maiores sit sunt mollitia esse. A in enim modi non expedita ducimus inventore, sapiente eius?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dolorum alias accusamus. Quas odit quidem maiores sit sunt mollitia esse. A in enim modi non expedita ducimus inventore, sapiente eius?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dolorum alias accusamus. Quas odit quidem maiores sit sunt mollitia esse. A in enim modi non expedita ducimus inventore, sapiente eius?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dolorum alias accusamus. Quas odit quidem maiores sit sunt mollitia esse. A in enim modi non expedita ducimus inventore, sapiente eius?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dolorum alias accusamus. Quas odit quidem maiores sit sunt mollitia esse. A in enim modi non expedita ducimus inventore, sapiente eius?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dolorum alias accusamus. Quas odit quidem maiores sit sunt mollitia esse. A in enim modi non expedita ducimus inventore, sapiente eius?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dolorum alias accusamus. Quas odit quidem maiores sit sunt mollitia esse. A in enim modi non expedita ducimus inventore, sapiente eius?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dolorum alias accusamus. Quas odit quidem maiores sit sunt mollitia esse. A in enim modi non expedita ducimus inventore, sapiente eius?</p>
+            <h1>Åbningstider</h1>
+            <section class="wrapper">
+                <article class="row">
+                    <dl class="list">
+                        <h2>Denne uge:</h2>
+                        <dt>Mandag:</dt>
+                        <dd>09:30 - 17:30</dd>
+                        <dt>Tirsdag:</dt>
+                        <dd>09:30 - 17:30</dd>
+                        <dt>Onsdag:</dt>
+                        <dd>09:30 - 17:30</dd>
+                        <dt>Torsdag:</dt>
+                        <dd>09:30 - 17:30</dd>
+                        <dt>Fredag:</dt>
+                        <dd>09:30 - 17:30</dd>
+                        <dt>Lørdag:</dt>
+                        <dd>10:00 - 14:00</dd>
+                        <dt>Søndag:</dt>
+                        <dd>Lukket</dd>
+                    </dl>
+                    <dl class="list">
+                        <h2>Telefontid:</h2>
+                        <dt>Mandag:</dt>
+                        <dd>09:30 - 19:00</dd>
+                        <dt>Tirsdag:</dt>
+                        <dd>09:30 - 19:00</dd>
+                        <dt>Onsdag:</dt>
+                        <dd>09:30 - 19:00</dd>
+                        <dt>Torsdag:</dt>
+                        <dd>09:30 - 19:00</dd>
+                        <dt>Fredag:</dt>
+                        <dd>09:30 - 19:00</dd>
+                        <dt>Lørdag:</dt>
+                        <dd>10:00 - 17:00</dd>
+                        <dt>Søndag:</dt>
+                        <dd>Lukket</dd>
+                    </dl>
+                </article>
+                <article class="row">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9001.806015921276!2d12.6047909!3d55.6637484!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46525348f12a81d7%3A0x6e37611b409a35ed!2sAmagerbro%20Apotek!5e0!3m2!1sen!2sdk!4v1702557285925!5m2!1sen!2sdk" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="text-box">
+                        <h2>Vi bor her:</h2>
+                        <p><strong>Reberbanegade 3,</strong></p>
+                        <p>2300 København S</p>
+                        <dl>
+                            <dt>Tlf:</dt>
+                            <dd>32 57 83 83</dd>
+                            <dt>Fax:</dt>
+                            <dd>32 57 40 89</dd>
+                            <dt>E-mail:</dt>
+                            <dd>243ka@apoteket.dk</dd>
+                        </dl>
+                    </div>
+                </article>
+            </section>
         </Indholdsboks>
 
 
@@ -29,10 +76,79 @@ import Footercard from '../components/Footercard.astro';
     <Footercard/>
 </Layout>
 <style>
+    /* Offset ingen herobillede */
     .divider {
         height: 95px;
     }
     main {
         z-index: 0;
     }
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+        margin: 0 auto;
+        width: 80%;
+    }
+    .row {
+        margin: 25px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 150px;
+    }
+    
+    h1 {
+        margin: 50px 200px;
+    }
+    
+    dl {
+
+        display: grid;
+        grid-template-columns: max-content auto;
+        font-size: 20px;
+        font-family: var(--paragraph-font);
+    }
+    dt {
+        grid-column-start: 1;
+        font-weight: 600;
+        margin: 5px;
+    }
+    dd {
+        grid-column-start: 2;
+        margin-left: 10px;
+        margin: 5px 5px 5px 15px;
+    }
+    /*Mobile*/
+    @media (max-width: 460px) {
+        .wrapper {
+            flex-direction: column;
+            width: 100%;
+        }
+        .row {
+            flex-direction: column;
+            max-width: 100%;
+            gap: 50px;
+            
+        }
+        h1 {
+            margin: 25px auto;
+        }
+        dd, dt {
+            margin: 2.5px;
+        }
+        iframe {
+            order: 2;
+        }
+        .text-box {
+            order: 0;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+    
+   
+    
 </style>

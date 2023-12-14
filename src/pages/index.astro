@@ -16,6 +16,7 @@ import Button from '../components/Button.astro';
 	<main>
 		<Hero image="hero_placeholder2.png"/>
 		<Indholdsboks>
+			<div class="indexparent">
 			<h1>Velkommen til Øens Apotek</h1>
 			<p>Beliggende i Amagercenteret på stueetagen bliver du budt velkommen af vores erfarne og imødekommende personale, som brænder for at bistå dig med et smil på læben og imødekomme dine individuelle sundhedsbehov. Hos Øens kan du forvente nærvær, engagement og en skræddersyet tilgang til rådgivning, sparring og forskellige produkter, der passer præcist til dine behov.</p>
 			<p>Vores sortiment af varer og medicin omfatter nøje udvalgte produkter af højeste kvalitet og sikkerhed indenfor sundhedsbranchen. Lagerstatus opdateres dagligt, så du kan opleve en effektiv og gnidningsløs vej mod optimal sundhed, velvære og mental balance.</p>
@@ -36,6 +37,7 @@ import Button from '../components/Button.astro';
 			<h2>Vaccination</h2>
 			<p>På Øens Apotek tilbyder vi vaccinationer for både Influenza og Covid-19, og det foregår hver mandag og fredag. For Covid-19 vaccination bedes du venligst bestille tid på www.vacciner.dk. Alternativt kan du kontakte os på apoteket samme dag, hvis du ønsker at blive vaccineret uden forudgående tidsbestilling. Vil vi hurtigst muligt vurdere muligheden for at imødekomme din anmodning.</p>
 			<p>Telefon: 32 57 83 83</p>
+			</div>
 		</Indholdsboks>
 
 		
@@ -97,6 +99,11 @@ h2 {
     align-items: center;
     justify-content: center;
   }
+  .indexparent {
+	max-width: 900px;
+	margin: 0 auto;
+  }
+
 }
 
 

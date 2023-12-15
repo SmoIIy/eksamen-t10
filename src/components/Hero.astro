@@ -1,10 +1,10 @@
 ---
 import '../style.css'
-const {image} = Astro.props;
+const {image,variant = ""} = Astro.props;
 ---
 
 <div class="heroimageparent">
-  <div class="heroimage">
+  <div class="heroimage" id={variant} >
     <img src={image} alt="hero">
   </div>
 </div>
@@ -17,12 +17,23 @@ const {image} = Astro.props;
       overflow: hidden;
       
   }
+  
   .heroimage{
       display: flex;
       justify-content: center;
       transform: translate(0,-10%);
       height: 600px;
   }
+  #front {
+    transform: translate(65%, -10%);
+  }
+  #om {
+    transform: translate(-45%, -5%);
+  }
+  #personale {
+    transform: translate(-30%, -10%);
+  }
+
 
 }
 
@@ -50,6 +61,12 @@ const {image} = Astro.props;
 .heroimage img {
     width: 100%;
     max-width: 100%;
+  }
+  #personale {
+    transform: translateY(-35%);
+  }
+  #kontakt {
+    transform: translateY(-30%);
   }
 }
 </style>

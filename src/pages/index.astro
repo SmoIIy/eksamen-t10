@@ -17,50 +17,50 @@ import Button from '../components/Button.astro';
 		<Hero image="heroindexfinal3.webp" variant="front"/>
 		<Indholdsboks>
 			<div class="indexparent">
+				<section>
 			<h1>Velkommen til Øens Apotek</h1>
-			<p>Beliggende i stueetagen af Amagercenteret byder vores erfarne og imødekommende personale dig velkommen. Vi brænder for at bistå dig med et smil og imødekomme dine individuelle sundhedsbehov. Hos Øens kan du forvente nærvær, engagement og en skræddersyet tilgang til rådgivning, sparring og diverse produkter, der nøje passer til dine behov.</p>
-			<p>Vores sortiment af varer og medicin omfatter nøje udvalgte produkter af højeste kvalitet og sikkerhed inden for sundhedsbranchen. Lagerstatus opdateres dagligt, så du kan opleve en effektiv og gnidningsløs vej mod optimal sundhed, velvære og mental balance.</p>
-			
-<div class="knapper">
-			<h2>Få leveret hjem</h2> 
-
+			<p>På stueetagen af Amagercenteret byder vores erfarne personale dig velkommen. Vi brænder for at bistå dig med et smil og tage hånd om dine individuelle sundhedsbehov. Hos Øens kan du forvente en empatisk, professionel og skræddersyet tilgang til rådgivning, sparring og produkter.</p>
+			<p>Vores sortiment omfatter nøje udvalgte varer og medicin af højeste kvalitet og sikkerhed. Lagerstatus opdateres dagligt, så du kan opleve en gnidningsløs vej mod sundhed, velvære og mental balance.</p>
+			</section>
+<section class="knapper">
+			<h2>Medicin Online</h2> 
 				<div class="knapperne">
 						<div class="knap1">
-							<Button href="https://www.dinapoteker.dk/" title="Medicin online" body="gå til dinApoteker.dk"/>
+							<Button href="https://www.dinapoteker.dk/" title="Bestil online" body="gå til dinApoteker.dk"/>
 						</div>
 						<div class="knap2">
-								<h4>Apoteket kan tilbyde e-handel via dinApoteker.dk</h4>
-								<p>Få det sendt direkte hjem med bud, posten eller få det gjort klar til afhentning.</p>
+								<h4>Vi tilbyder e-handel via dinApoteker.dk</h4>
+								<p>Få dine varer leveret direkte hjem med bud eller post, eller gør dem klar til afhentning.</p>
 						</div>
-
 				</div>
-</div>
+</section>
+<section class="vaccination">
 			<h2>Vaccination</h2>
-			<p>På Øens Apotek tilbyder vi vaccinationer for både Influenza og Covid-19, og det foregår hver mandag og fredag. For Covid-19 vaccination bedes du venligst bestille tid på www.vacciner.dk. Alternativt kan du kontakte os på apoteket samme dag, hvis du ønsker at blive vaccineret uden forudgående tidsbestilling. Vil vi hurtigst muligt vurdere muligheden for at imødekomme din anmodning.</p>
-			<p>Telefon: 32 57 83 83</p>
+			<p>På apoteket tilbyder vi vaccinationer mod influenza og covid-19 hver mandag og fredag. For covid-19 vaccination, venligst bestil tid på www.vacciner.dk. Læs mere under 'Kontakt'.</p>
+			</section>
 			</div>
 		</Indholdsboks>
-
-		
-		
 	</main>
 	<Footercard/>
 </Layout>
 
 <style>
 p {
-	margin: 10px;
-	padding: 10px;
+	margin: 0.625rem;
+	padding: 0.625rem;
 	line-height: 1.5;
 }
 h1 {
-	margin: 10px;
-	padding: 10px;
+	margin: 0.625rem;
+	padding: 0.625rem;
 }
 h2 {
-	margin: 10px;
-	padding: 10px;
+	margin: 0.625rem;
+	padding: 0.625rem 0.625rem 0 0.625rem;
 	align-self: flex-start;
+}
+section {
+	padding-bottom: 2.2rem;
 }
 .knapper {
   	background-color: var(--dark-white);
@@ -68,18 +68,17 @@ h2 {
   	flex-direction: column;
   	align-items: center;
   	justify-content: center;
-	
+	padding-bottom: 0;
 }
-
 .knapperne {
-  	margin: 10px;
-  	padding: 10px;
+  	margin: 0.625rem;
+  	padding: 0.625rem;
 }
 .knap1 {
-	margin-bottom: 20px;
+	margin-bottom: 1.25rem;
 }
 .knap2 {
-	margin-bottom: 20px;
+	margin-bottom: 1.25rem;
 	display: flex;
 	flex-direction: column;	
 }
@@ -89,8 +88,9 @@ h2 {
 	font-size: 1.1rem;
 	line-height: 1.5;
 }
-
-
+.vaccination {
+		padding-top: 2.2rem;
+}
 @media (min-width: 460px) {
 	.knapperne {
     display: flex;
@@ -98,15 +98,13 @@ h2 {
     justify-content: center;
     align-items: center;
   }
-
   .knap1,
   .knap2 {
-    margin: 0 10px;
+    margin: 0 0.625rem;
   }
   .knap2 h4 {
 	font-size: 1.5rem;
 }
-
   .knapper {
     background-color: var(--bright-white);
     display: flex;
@@ -118,13 +116,5 @@ h2 {
 	max-width: 900px;
 	margin: 0 auto;
   }
-
-
-
 }
-
-
-
-
-
 </style>

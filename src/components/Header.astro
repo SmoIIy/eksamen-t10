@@ -17,6 +17,7 @@ const currentPath = pathname.slice(1);
             <li><a class={currentPath === "om" ? "active" : ""} href="/om">Om apoteket</a></li>
             <li><a class={currentPath === "kontakt" ? "active" : ""} href="/kontakt">Kontakt</a></li>
             <li><a class={currentPath === "personale" ? "active" : ""}href="/personale">Personale</a></li>
+             <li><a class={currentPath === "raadgivning" ? "active" : ""}href="/raadgivning">Rådgivning</a></li>
         </ul>
     </div>
 </header>
@@ -62,7 +63,7 @@ const currentPath = pathname.slice(1);
         display: flex;
         justify-content: space-around;
         padding: 10px;
-        width: 650px;
+        width: 850px;
     }
     li {
         list-style: none;

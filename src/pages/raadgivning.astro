@@ -57,8 +57,14 @@ import Footercard from '../components/Footercard.astro';
     border-radius: 1.5%;
     margin: 1rem 0 1rem 0;
     }
+    div:hover {
+        cursor: pointer;
+    }
+    div:hover p {
+        color: var(--main-blue);
+    }
    section:first-child {
-    margin-bottom: 3.5rem;
+    margin-bottom: 3rem;
     }
     section {
     margin: 2rem;
@@ -81,14 +87,14 @@ import Footercard from '../components/Footercard.astro';
     /* Større skærme */
     @media screen and (min-width: 600px) {
         img {
-            height: 250px;
+            height: 275px;
             margin-bottom: 2rem;
         }
         section:first-child {
             margin: 1.5rem 12rem 4.5rem 12rem;
         }
         section {
-            margin: 0 10rem;
+            margin: 0 8rem;
         }
         article {
             display: grid;
@@ -96,6 +102,9 @@ import Footercard from '../components/Footercard.astro';
         }
         div {
             margin: 0 3rem 3.5rem;
+        }
+        h1 {
+            margin-bottom: 1.5rem;
         }
     }
 </style>

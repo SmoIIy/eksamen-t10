@@ -11,11 +11,91 @@ import Footercard from '../components/Footercard.astro';
     <Mobileheader/>
     <Header/>
     <main>
-        <Hero image="/hero2.webp" variant="rådgivning"/>
+        <Hero image="/images/raadgivning.jpg" variant="rådgivning"/>
         <Indholdsboks>
             <section>
-                
+                <h1>Rådgivning</h1>
+                <p>Her kan du læse og få rådgvining inden for en lang række områder, såsom brugen af medicin, forebyggelse og håndtering af sygdomme samt information om vaccination - hvad end det drejer sig om dig eller en pårørende. Selvom informationen er omfattende og dækker de fleste almindelig spørgsmål, anbefaler vi altid, at du kontakter os enten telefonisk eller via mail, eller møder vores imødekommende personale fysisk på apoteket, hvis du har behov for mere specifik og nærværende rådgivning til din situation.</p>
+            </section>
+            <section>
+                <article>
+                    <div>
+                        <h2>Medicin</h2>
+                    <img src="/images/medicin.jpg" alt="En håndfuld medicin">
+                        <p>Er du nysgerrig på din medicin? Her kan du læse om bivirkninger, dosering og mere vedrørende din specifikke medicin, samt opdage billigere alternativer og få information om, hvordan din medicin kan påvirke brugen af et andet lægemiddel.</p>
+                    </div>
+                    <div>
+                        <h2>Sygdom</h2>
+                    <img src="/images/sygdom.jpg" alt="En håndfuld medicin">
+                        <p>Er du i tvivl eller ønsker du information om en specifik sygdom, kan du her blive klogere på symptomer, årsager og behandling af en lang række sygdomme, der præger det danske samfund i varierende grad.</p>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <h2>Vaccination</h2>
+                    <img src="/images/vaccination.jpg" alt="En håndfuld medicin">    
+                        <p>På apoteket tilbyder vi vaccinationer mod influenza og covid-19 hver mandag og fredag. For covid-19 vaccination, venligst bestil tid på www.vacciner.dk. Du kan også kontakte os på apoteket samme dag for vaccination uden forudgående tidsbestilling. Læs mere om mulighederne her.</p>
+                    </div>
+                    <div>
+                        <h2>På apoteket</h2>
+                    <img src="/images/paa_apoteket.jpg" alt="En håndfuld medicin">
+                        <p>Vores medarbejdere på apoteket tilbyder rådgivning og sparring inden for de sundhedsområder, der er relevante for dig. Hos Øens vil du altid blive mødt med empati, tryghed og professionalisme. Vi har som udgangspunkt at tilpasse rådgivningen efter dine individuelle behov.</p>
+                    </div>
+                </article>
             </section>
         </Indholdsboks>
     </main>
+    <Footercard/>
 </Layout>
+
+<style>
+    img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 10% uigennemsigtig */
+    border-radius: 1.5%;
+    margin: 1rem 0 1rem 0;
+    }
+   section:first-child {
+    margin-bottom: 3.5rem;
+    }
+    section {
+    margin: 2rem;
+    }
+    div {
+    margin-bottom: 3rem;
+    }
+    div img, div h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    }
+    h1 {
+    margin-bottom: 1rem;
+    }
+    p {
+        line-height: 1.5;
+    }
+    /* Større skærme */
+    @media screen and (min-width: 600px) {
+        img {
+            height: 250px;
+            margin-bottom: 2rem;
+        }
+        section:first-child {
+            margin: 1.5rem 12rem 4.5rem 12rem;
+        }
+        section {
+            margin: 0 10rem;
+        }
+        article {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        div {
+            margin: 0 3rem 3.5rem;
+        }
+    }
+</style>

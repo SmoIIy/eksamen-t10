@@ -15,7 +15,8 @@ import Footercard from '../components/Footercard.astro';
         <Indholdsboks>
             <section>
                 <h1>Rådgivning</h1>
-                <p>Her kan du læse og få rådgvining inden for en lang række områder, såsom brugen af medicin, forebyggelse og håndtering af sygdomme samt information om vaccination - hvad end det drejer sig om dig eller en pårørende. Selvom informationen er omfattende og dækker de fleste almindelig spørgsmål, anbefaler vi altid, at du kontakter os enten telefonisk eller via mail, eller møder vores imødekommende personale fysisk på apoteket, hvis du har behov for mere specifik og nærværende rådgivning til din situation.</p>
+                <p>Her kan du læse og få rådgvining inden for en lang række områder, såsom brugen af medicin, forebyggelse og håndtering af sygdomme samt information om vaccination - uanset om det drejer sig om dig eller en pårørende.</p>
+                <p>Selvom informationen her er omfattende og dækker de fleste almindelige spørgsmål, anbefaler vi altid, at du kontakter os telefonisk eller via e-mail, eller taler med vores imødekommende personale på apoteket, hvis du har behov for mere specifik og nærværende rådgivning.</p>
             </section>
             <section>
                 <article>
@@ -57,33 +58,33 @@ import Footercard from '../components/Footercard.astro';
     border-radius: 1.5%;
     margin: 1rem 0 1rem 0;
     }
+    section {
+    margin: 2rem;
+    }
+    div h2, div p {
+        background-color: var(--dark-white);
+        padding: 1rem;
+        border-radius: 1.5%;
+    }
     div:hover {
         cursor: pointer;
     }
     div:hover p {
         color: var(--main-blue);
     }
-   section:first-child {
-    margin-bottom: 3rem;
-    }
-    section {
-    margin: 2rem;
-    }
-    div {
-    margin-bottom: 3rem;
-    }
     div img, div h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-
     }
     h1 {
     margin-bottom: 1rem;
     }
     p {
+        margin-bottom: 3rem;
         line-height: 1.5;
     }
+
     /* Større skærme */
     @media screen and (min-width: 600px) {
         img {
@@ -101,7 +102,10 @@ import Footercard from '../components/Footercard.astro';
             grid-template-columns: 1fr 1fr;
         }
         div {
-            margin: 0 3rem 3.5rem;
+            margin: 0 3rem 1.5rem;
+        }
+        div h2, div p {
+            background-color: transparent;
         }
         h1 {
             margin-bottom: 1.5rem;

@@ -19,11 +19,11 @@ import Button from '../components/Button.astro';
 			<div class="indexparent">
 				<section>
 			<h1>Velkommen til Øens Apotek</h1>
-			<p>På stueetagen af Amagercenteret byder vores erfarne personale dig velkommen. Vi brænder for at bistå dig med et smil og tage hånd om dine individuelle sundhedsbehov. Hos Øens kan du forvente en empatisk, professionel og skræddersyet tilgang til rådgivning, sparring og produkter.</p>
+			<p>På stueetagen af Amagercenteret byder vores erfarne personale dig velkommen. Vi brænder for at bistå dig med et smil og tage hånd om dine individuelle sundhedsbehov. Hos Øens kan du forvente en empatisk, professionel og skræddersyet tilgang til rådgivning, sparring, tjenester og produkter.</p>
 			<p>Vores sortiment omfatter nøje udvalgte varer og medicin af højeste kvalitet og sikkerhed. Lagerstatus opdateres dagligt, så du kan opleve en gnidningsløs vej mod sundhed, velvære og mental balance.</p>
 			</section>
 <section class="knapper">
-			<h2>Medicin Online</h2> 
+			<h2>E-handel</h2> 
 				<div class="knapperne">
 						<div class="knap1">
 							<Button href="https://www.dinapoteker.dk/" title="Bestil online" body="gå til dinApoteker.dk"/>
@@ -36,7 +36,7 @@ import Button from '../components/Button.astro';
 </section>
 <section class="vaccination">
 			<h2>Vaccination</h2>
-			<p>På apoteket tilbyder vi vaccinationer mod influenza og covid-19 hver mandag og fredag. For covid-19 vaccination, venligst bestil tid på www.vacciner.dk. Læs mere under 'Kontakt'.</p>
+			<p>På apoteket tilbyder vi vaccinationer mod influenza og covid-19 hver mandag og fredag. Du kan læse mere om dine muligheder under <a href="/raadgivning">Rådgivning</a>.</p>
 			</section>
 			</div>
 		</Indholdsboks>
@@ -45,10 +45,8 @@ import Button from '../components/Button.astro';
 </Layout>
 
 <style>
-p {
-	margin: 0.625rem;
-	padding: 0.625rem;
-	line-height: 1.5;
+section {
+    padding-bottom: 2.2rem;
 }
 h1 {
 	margin: 0.625rem;
@@ -59,8 +57,15 @@ h2 {
 	padding: 0.625rem 0.625rem 0 0.625rem;
 	align-self: flex-start;
 }
-section {
-	padding-bottom: 2.2rem;
+a:hover {
+	cursor: pointer;
+	text-decoration: none;
+	color: var(--main-blue);
+	}
+p {
+	margin: 0.625rem;
+	padding: 0.625rem;
+	line-height: 1.5;
 }
 .knapper {
   	background-color: var(--dark-white);

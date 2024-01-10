@@ -15,32 +15,32 @@ import Footercard from '../components/Footercard.astro';
         <Indholdsboks>
             <section>
                 <h1>Rådgivning</h1>
-                <p>Her kan du læse og få rådgvining inden for en lang række områder, såsom brugen af medicin, forebyggelse og håndtering af sygdomme samt information om vaccination - uanset om det drejer sig om dig eller en pårørende.</p>
-                <p>Selvom informationen her er omfattende og dækker de fleste almindelige spørgsmål, anbefaler vi altid, at du kontakter os telefonisk eller via e-mail, eller taler med vores imødekommende personale på apoteket, hvis du har behov for mere specifik og nærværende rådgivning.</p>
+                <p>Her kan du læse og få rådgvining inden for en række områder, såsom brugen af medicin, forebyggelse og håndtering af sygdomme samt information om vaccination - uanset om det drejer sig om dig eller en pårørende.</p>
+                <p>Selvom informationen på nedenstående links dækker de fleste almindelige spørgsmål, anbefaler vi altid, at du kontakter os eller taler med vores personale på apoteket, hvis du har behov for mere specifik eller nærværende rådgivning.</p>
             </section>
             <section>
                 <article>
                     <div>
                         <h2>Medicin</h2>
                     <img src="/images/medicin.jpg" alt="En håndfuld medicin">
-                        <p>Er du nysgerrig på din medicin? Her kan du læse om bivirkninger, dosering og mere vedrørende din specifikke medicin, samt opdage billigere alternativer og få information om, hvordan din medicin kan påvirke brugen af et andet lægemiddel.</p>
+                        <p>Er du nysgerrig på din medicin? Her kan du læse om bivirkninger, dosering og mere vedrørende din specifikke medicin samt opdage prismæssige alternativer.</p>
                     </div>
                     <div>
                         <h2>Sygdom</h2>
                     <img src="/images/sygdom.jpg" alt="En håndfuld medicin">
-                        <p>Er du i tvivl eller ønsker du information om en specifik sygdom, kan du her blive klogere på symptomer, årsager og behandling af en lang række sygdomme, der præger det danske samfund i varierende grad.</p>
+                        <p>Er du i tvivl eller ønsker du information om en specifik sygdom? Her kan du blive klogere på symptomer, årsager og behandling af en lang række sygdomme.</p>
                     </div>
                 </article>
                 <article>
                     <div>
                         <h2>Vaccination</h2>
                     <img src="/images/vaccination.jpg" alt="En håndfuld medicin">    
-                        <p>På apoteket tilbyder vi vaccinationer mod influenza og covid-19 hver mandag og fredag. For covid-19 vaccination, venligst bestil tid på www.vacciner.dk. Du kan også kontakte os på apoteket samme dag for vaccination uden forudgående tidsbestilling. Læs mere om mulighederne her.</p>
+                        <p>På apoteket tilbyder vi vaccinationer mod influenza og covid-19 hver mandag og fredag. For covid-19 vaccination, venligst bestil tid på www.vacciner.dk.</p>
                     </div>
                     <div>
                         <h2>På apoteket</h2>
                     <img src="/images/paa_apoteket.jpg" alt="En håndfuld medicin">
-                        <p>Vores medarbejdere på apoteket tilbyder rådgivning og sparring inden for de sundhedsområder, der er relevante for dig. Hos Øens vil du altid blive mødt med empati, tryghed og professionalisme. Vi har som udgangspunkt at tilpasse rådgivningen efter dine individuelle behov.</p>
+                        <p>Vores medarbejdere tilbyder rådgivning og sparring inden for de sundhedsområder, der er relevante for dig. Læs mere om rådgivning på apoteket her.</p>
                     </div>
                 </article>
             </section>
@@ -56,10 +56,15 @@ import Footercard from '../components/Footercard.astro';
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 10% uigennemsigtig */
     border-radius: 1.5%;
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0;
     }
     section {
     margin: 2rem;
+    }
+    div img, div h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     div h2, div p {
         background-color: var(--dark-white);
@@ -72,17 +77,18 @@ import Footercard from '../components/Footercard.astro';
     div:hover p {
         color: var(--main-blue);
     }
-    div img, div h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    }
     h1 {
     margin-bottom: 1rem;
     }
     p {
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
         line-height: 1.5;
+    }
+    section:first-child p {
+        margin-bottom: 2rem;
+    }
+    section:first-child {
+        margin-bottom: 4rem;
     }
 
     /* Større skærme */
@@ -93,9 +99,6 @@ import Footercard from '../components/Footercard.astro';
         }
         section:first-child {
             margin: 1.5rem 12rem 4.5rem 12rem;
-        }
-        section {
-            margin: 0 8rem;
         }
         article {
             display: grid;

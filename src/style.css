@@ -43,13 +43,6 @@ h3 {
   line-height: normal;
   color: var(--black);
 }
-h4 {
-  font-family: var(--paragraph-font);
-  font-weight: 600;
-  font-size: 20px;
-  line-height: normal;
-  color: var(--black);
-}
 
 p,
 a {

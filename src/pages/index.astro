@@ -29,8 +29,7 @@ import Button from '../components/Button.astro';
 							<Button href="https://www.dinapoteker.dk/" title="Medicin online" body="gå til dinApoteker.dk"/>
 						</div>
 						<div class="knap2">
-								<h4>Apoteket kan tilbyde e-handel via dinApoteker.dk</h4>
-								<p>Få det sendt direkte hjem med bud, posten eller få det gjort klar til afhentning.</p>
+							<Button href="#" title="Medicin To go" body="Få medicin leveret til døren"/>
 						</div>
 
 				</div>
@@ -60,7 +59,6 @@ h1 {
 h2 {
 	margin: 10px;
 	padding: 10px;
-	align-self: flex-start;
 }
 .knapper {
   	background-color: var(--dark-white);
@@ -68,28 +66,19 @@ h2 {
   	flex-direction: column;
   	align-items: center;
   	justify-content: center;
-	
 }
 
 .knapperne {
   	margin: 10px;
   	padding: 10px;
+
 }
 .knap1 {
 	margin-bottom: 20px;
 }
 .knap2 {
 	margin-bottom: 20px;
-	display: flex;
-	flex-direction: column;	
 }
-.knap2 p,.knap2 h4 {
-	margin: 0;
-	padding: 0;
-	font-size: 1.1rem;
-	line-height: 1.5;
-}
-
 
 @media (min-width: 460px) {
 	.knapperne {
@@ -103,9 +92,6 @@ h2 {
   .knap2 {
     margin: 0 10px;
   }
-  .knap2 h4 {
-	font-size: 1.5rem;
-}
 
   .knapper {
     background-color: var(--bright-white);
@@ -118,8 +104,6 @@ h2 {
 	max-width: 900px;
 	margin: 0 auto;
   }
-
-
 
 }
 

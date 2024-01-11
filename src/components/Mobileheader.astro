@@ -135,20 +135,19 @@ import '../style.css'
 </style>
 
 <script>
-    //function til at håndtere burgermenu
-    //ville have lavet anonym function, men ser ikk ud til at man kan have flere af dem på samme tid
+    
 
     function burgermenu() {
-        //variables
-        const menuBtn = document.querySelector('.burgermenu');
-        const mobileMenu = document.querySelector('nav');
+        //Variabler
+        const menuBtn = document.querySelector('.burgermenu'); //Reference til klassen burgermenu
+        const mobileMenu = document.querySelector('nav'); //Reference til nav-element
         console.log("test");
-        //add eventlistener
-            menuBtn.addEventListener('click', function(){
-            //toggle is-active class
-            menuBtn.classList.toggle('is-active')
-            mobileMenu.classList.toggle('is-active')
+        //Tilføj eventlistener
+            menuBtn.addEventListener('click', function(){ //Når knappen klikkes, udføres funktionen
+            //Toggle is-active class
+            menuBtn.classList.toggle('is-active') //Skifter klassen 'is-active'
+            mobileMenu.classList.toggle('is-active') //Skifter klassen for at vise mobilmenu
     });
     }
-    burgermenu();
+    burgermenu(); //Kalder funktion - aktiverer menuen når side indlæses
 </script>

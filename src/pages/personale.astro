@@ -1,4 +1,5 @@
 ---
+//Fejl at ligge i hegn, da koden kun køres en gang og hjemmesiden ikke får databasens opdateringer
 import Layout from '../layouts/Layout.astro';
 import Mobileheader from '../components/Mobileheader.astro';
 import Header from '../components/Header.astro';
@@ -8,15 +9,15 @@ import Personalecard from '../components/Personalecard.astro';
 import Footercard from '../components/Footercard.astro';
 import Button from '../components/Button.astro';
 //Fetch Database
-const response = await fetch("https://hnrcndxoquhelmpaqheh.supabase.co/rest/v1/personaleliste", {
-	method: "GET",
+const response = await fetch("https://hnrcndxoquhelmpaqheh.supabase.co/rest/v1/personaleliste", { //Funktion der laver et fetch-kald
+	method: "GET", //Får information med metoden GET
 	headers: {
 	apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhucmNuZHhvcXVoZWxtcGFxaGVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTM4MjI5MTksImV4cCI6MjAwOTM5ODkxOX0.Kj0vgWH3imfxSBjrhKN9746mppt3v9ldhd1y2ugyfyc"
-	},
+	}, //Sender API-nøgle for at få adgang
 }
 );
 //Parse json
-const data = await response.json();
+const data = await response.json(); //Gør response-variablen til en json og ligger den i en data-variabel
 //console.log(data);
 ---
 <Layout title='Personale'>
@@ -28,8 +29,8 @@ const data = await response.json();
             <h1>Personale</h1>
             <section class="personel">
                 {
-                    data.map((thing) =>{
-                        return <Personalecard data={thing} />
+                    data.map((thing) =>{ //Map looper igennem hvert objekt (thing) fra databasen
+                        return <Personalecard data={thing} /> //Returnerer derefter et personale kort
                     })
                 }
             </section>

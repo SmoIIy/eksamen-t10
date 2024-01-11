@@ -1,7 +1,7 @@
 ---
 
 
-const { data } = Astro.props;
+const { data } = Astro.props; //Fylder data i komponentet nedenfor
 ---
 <astro-card>
 	<li	 class="link-card">
@@ -87,21 +87,17 @@ const { data } = Astro.props;
 </style>
 
 <script>
-	//class bruges her, til at differencere hver instance af komponentet
-	//så hver af dem kan have sin egen funktionalitet.
-	//constructoren af classen skaber en instans af komponentet, med koden nedenfor
-	//inkluderet
-		class Personalecard extends HTMLElement {
-			constructor(){
+	
+		class Personalecard extends HTMLElement { //Laver en class der giver et HTML-element
+			constructor(){ //Beder om et objekt af personale kort class
 				super();
-				//variabler 
-				//'this' keywoarded refererer til den specifikke instans
+				
 				const card = this.querySelector('li');
 				const img = this.querySelector('.image');
 				const overlay = this.querySelector('.overlay');
-				//tilføj eventlistener
+				//Tilføj eventlistener
 				card.addEventListener('click', () => {
-						//toggle class med animation
+						//Toggle class med animation
 						img.classList.toggle('is-active-1')
         				card.classList.toggle('is-active-1')
         				overlay.classList.toggle('is-active-1')
@@ -109,5 +105,5 @@ const { data } = Astro.props;
 				});
 		}
 		}
-		customElements.define('astro-card', Personalecard);
+		customElements.define('astro-card', Personalecard); //Tilføjer personale kort class til HTML-elementet astro-card
 </script>
